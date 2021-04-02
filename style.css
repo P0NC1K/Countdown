@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: hsl(235, 16%, 14%);
+    background-image: url('images/bg-stars.svg');
+}
+
+.message {
+    font-family: 'Red Hat Text', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 160px;
+}
+
+.date {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.rectangle {
+    height: 220px;
+    width: 220px;
+    background-color: hsl(237, 18%, 59%);
+    margin-right: 30px;
+}
+
+footer {
+    height: 190px;
+    width: 100%;
+    background: url('images/pattern-hills.svg');
+    background-size: 100%;
+    margin-top: 9.9%;
+}
+
+.links {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    list-style: none;
+}
+
+.element {
+    margin-left: 30px;
+}
