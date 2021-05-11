@@ -1,19 +1,25 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: hsl(235, 16%, 14%);
     background-image: url('images/bg-stars.svg');
+    font-family: 'Red Hat Text', sans-serif;
+    color: white;
 }
 
-.message {
-    font-family: 'Red Hat Text', sans-serif;
+.finalMessage {
+    display: none;
+}
+
+.message, .done__message {
+    display: block;
     text-transform: uppercase;
     letter-spacing: 9px;
     font-size: 20px;
-    color: white;
     text-align: center;
     margin-top: 160px;
 }
@@ -21,32 +27,167 @@ body {
 .date {
     display: flex;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 130px;
 }
 
 .rectangle {
     height: 220px;
     width: 220px;
-    background-color: hsl(237, 18%, 59%);
+    background-color:  hsl(236, 21%, 26%);
     margin-right: 30px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.rectangle > span {
+    font-size: 120px;
+    color: hsl(345, 95%, 68%);
+    height: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.rectangle .days::after {
+    content: "days";
+}
+
+.rectangle .hours::after {
+    content: "hours";
+}
+
+.rectangle .minutes::after {
+    content: "minutes";
+}
+
+.rectangle .seconds::after {
+    content: "seconds";
+}
+
+.rectangle .seconds::after, .rectangle .minutes::after, .rectangle .hours::after, .rectangle .days::after {
+    position: absolute;
+    bottom: -50px;
+    text-transform: uppercase;
+    letter-spacing: 9px;
+    font-size: 20px;
+    color: hsl(237, 18%, 59%);
 }
 
 footer {
-    height: 190px;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    background: url('images/pattern-hills.svg');
-    background-size: 100%;
-    margin-top: 9.9%;
+}
+
+footer > img {
+    width: 100%;
+    height: 190px;
 }
 
 .links {
-    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items:center;
+    position: absolute;
+    top: 100px;
+    left: 45%;
     list-style: none;
 }
 
 .element {
-    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* Media Queries */
+
+@media(max-width: 1080px) {
+    .rectangle {
+        height: 170px;
+        width: 170px;
+    }
+
+    .rectangle > span {
+        font-size: 90px;
+        height: 145px;
+    }
+
+    .rectangle .seconds::after, .rectangle .minutes::after, .rectangle .hours::after, .rectangle .days::after {
+        font-size: 15px;
+        letter-spacing: 7px;
+        bottom: -40px;
+    }
+
+    .message, .done__message {
+        font-size: 17px;
+        letter-spacing: 6px;
+    }
+
+    .date {
+        margin-top: 100px;
+    }
+}
+
+@media(max-width: 850px) {
+    .rectangle {
+        height: 100px;
+        width: 100px;
+    }
+
+    .rectangle > span {
+        font-size: 55px;
+        height: 90px;
+    }
+
+    .rectangle .seconds::after, .rectangle .minutes::after, .rectangle .hours::after, .rectangle .days::after {
+        font-size: 10px;
+        letter-spacing: 3px;
+        bottom: -30px;
+    }
+
+    .message, .done__message {
+        font-size: 14px;
+        letter-spacing: 5px;
+        margin-top: 200px;
+    }
+
+    .date {
+        margin-top: 80px;
+    }
+
+    .links {
+        left: 45%;
+    }
+
+}
+
+@media(max-width: 530px) {
+    .rectangle {
+        height: 60px;
+        width: 60px;
+    }
+
+    .rectangle > span {
+        font-size: 32px;
+        height: 50px;
+    }
+
+    .rectangle .seconds::after, .rectangle .minutes::after, .rectangle .hours::after, .rectangle .days::after {
+        font-size: 7px;
+        letter-spacing: 1px;
+        bottom: -20px;
+    }
+
+    .message, .done__message {
+        font-size: 10px;
+        letter-spacing: 3px;
+        margin-top: 220px;
+    }
+
+    .date {
+        margin-top: 40px;
+    }
+
+    .links {
+        left: 35%;
+    }
+
 }
