@@ -7,7 +7,7 @@ let initialMessage = document.querySelector('.message');
 
 console.log(initialMessage)
 
-const finishDate = new Date('June 7, 2021 00:00:00 GMT+03:00');
+const finishDate = new Date('November 15, 2022 00:00:00 GMT+03:00');
 
 setInterval(function() {
     // checking the current date
