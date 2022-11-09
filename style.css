@@ -94,7 +94,12 @@ footer > img {
 }
 
 .element {
-    margin-right: 30px;
+    margin-right: 50px;
+}
+
+.icon {
+    width: 40px;
+    filter: invert(56%) sepia(8%) saturate(1084%) hue-rotate(198deg) brightness(94%) contrast(92%);
 }
 
 /* Media Queries */
